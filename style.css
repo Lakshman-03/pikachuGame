@@ -1,0 +1,129 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'press start 2p';
+}
+
+.nav-container{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    z-index: 1;
+}
+span{
+    display: block;
+}
+
+.gaming-Environment{
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    height: 100vh;
+    background-color: rgb(30, 199, 197);
+}
+.game-body{
+    height: 80%;
+}
+.game-bottom{
+    overflow: hidden;
+    height: 20%;
+    width: 150vw;
+    background-color: rgb(81, 0, 0);
+    display: flex;
+}
+
+@keyframes anim {
+    from{
+        translate: -0;
+    }
+    to{
+        translate: -100%;
+    }
+}
+
+.game-bottom div
+{
+    
+    background: linear-gradient(rgb(130, 26, 3),rgb(67, 1, 1),rgb(101, 3, 3));
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+}
+.brick{
+    animation: anim 1s linear 0s infinite;
+}
+
+.img-container{
+    z-index: 1;
+    position: absolute;
+    top: 65%;
+    left:25%;
+    transition: all .2s;
+}
+
+.controllers{
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 5px;
+    position: absolute;
+    top: 50vh;
+    left: 45px;
+    rotate: 45deg;
+}
+.controllers>div{
+    text-align: center;
+
+    height: 100px;
+    width: 100px;
+    background-color: rgba(113, 112, 112, 0.507);
+    backdrop-filter: blur(30px);
+    border-radius: 50%;
+}
+.controllers>div>button{
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 50%;
+    rotate: 315deg;
+}
+
+
+
+@keyframes anima {
+    from{
+        transform: translateX(1000%);
+    }
+    to{
+        transform: translateX(-1000%);
+    }
+}
+.coin{
+
+    font-size:50px;
+    position: absolute;
+    top: 68%;
+    left:50%;
+    transition: all .2s;
+    animation: anima 3s linear 0s infinite;
+}
+
+#over{
+    display: none;
+}
+
+@media (max-width:650px) {
+    .controllers{
+        left: -25px;
+        scale: 0.5;
+    }
+    .gaming-Environment{
+        height:90vh;
+    }
+}

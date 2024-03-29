@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Mario</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <audio src="./Stage Win.mp3" id="startAudio"></audio>
+    <audio src="./mario-coin-[AudioTrimmer.com].mp3" id="hitAudio"></audio>
+    <audio src="./Mario Death.mp3" id="endAudio"></audio>
+    <div class="nav-container" >
+        <div class="start">
+            MARIO
+            <span id ="score">0</span>
+        </div>
+        <div class="start"> 
+            🪙x1
+        </div>
+        <div class="start">
+            World
+            <span>
+                1-1
+            </span>
+        </div>
+        <div class="start">
+            TIME
+            <span>500</span>
+        </div>
+        <div id="over">
+           <center><h1>GAME OVER</h1></center> 
+            <br>
+            <center><h2><span id="finalScore"></span></h2></center>
+            <br>
+            <span id="enter"></span>
+        </div>
+    </div>  
+    
+    
+    <div class="gaming-Environment">
+        <div class="game-body">
+            <div class="img-container" id="chardiv">
+                <img src="./pika.gif" height="75px" id="image" alt="">
+            </div>
+        </div>
+        <div class="game-bottom">
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+            <div class="brick"></div>
+        </div>
+    </div>
+
+    <div class="controllers">
+        <div class="but up" onclick="funup()" ondblclick="funupboost()"><button>↑</button></div>
+        <div class="but right" onclick="funright()"><button>➝</button></div>
+        <div class="but left" onclick="funleft()"><button>←</button></div>
+        <div class="but down" onclick="fundown()"><button>↓</button></div>
+    </div>
+    <div class="coin" id="cactus">
+        🌵
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
